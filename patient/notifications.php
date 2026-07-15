@@ -1,0 +1,5 @@
+<?php
+$page_title = 'Notifications';
+require_once __DIR__ . '/../includes/init.php';
+require_role('patient');
+require __DIR__ . '/../includes/notifications_page.php';

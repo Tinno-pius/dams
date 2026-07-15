@@ -1,0 +1,95 @@
+/* ============================================================
+   DAMS login page - styles taken from the uploaded loginclinic
+   design (green split-screen with role selector).
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ===== LEFT PANEL ===== */
+.left-panel {
+  width: 48%;
+  background: #2e7d32;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.left-panel img.bg-photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; opacity: 0.18;
+}
+.left-panel .logo { position: relative; z-index: 2; display: flex; align-items: center; gap: 12px; }
+.logo-icon { background: rgba(255,255,255,0.2); border-radius: 8px; padding: 8px; display: flex; align-items: center; justify-content: center; }
+.logo-text { color: white; font-weight: 700; font-size: 1.1rem; line-height: 1.3; }
+.logo-sub { color: rgba(255,255,255,0.65); font-size: 0.75rem; margin-top: 2px; }
+.hero { position: relative; z-index: 2; }
+.hero h1 { font-size: 2.4rem; font-weight: 700; color: white; line-height: 1.25; margin-bottom: 14px; }
+.hero p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.75; max-width: 320px; }
+
+/* ===== RIGHT PANEL ===== */
+.right-panel { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 24px; }
+.form-wrapper { width: 100%; max-width: 420px; }
+.mobile-logo { display: none; align-items: center; gap: 12px; margin-bottom: 28px; }
+.mobile-logo .logo-icon { background: #2e7d32; }
+.mobile-logo-text { font-weight: 700; font-size: 0.95rem; color: #333; }
+
+/* ===== CARD ===== */
+.card { background: white; border-radius: 10px; padding: 32px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; }
+.card h2 { font-size: 1.4rem; font-weight: 700; color: #222; margin-bottom: 4px; }
+.card .subtitle { color: #888; font-size: 0.85rem; margin-bottom: 24px; }
+
+/* Role selector */
+.role-label { font-size: 0.78rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+.role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 6px; }
+.role-btn { padding: 10px 6px; border-radius: 6px; border: 1px solid #ccc; background: #fafafa; color: #555; font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+.role-btn:hover { border-color: #2e7d32; background: #f1f8e9; color: #2e7d32; }
+.role-btn.active { border: 2px solid #2e7d32; background: #e8f5e9; color: #2e7d32; }
+.role-desc { font-size: 0.75rem; color: #999; margin-bottom: 20px; }
+
+/* Fields */
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 0.85rem; font-weight: 500; color: #444; margin-bottom: 6px; }
+.field-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.forgot-link { font-size: 0.78rem; color: #1565c0; text-decoration: none; }
+.forgot-link:hover { text-decoration: underline; }
+.input-wrap { position: relative; }
+input[type="email"], input[type="password"], input[type="text"] {
+  width: 100%; padding: 10px 12px; border-radius: 6px; border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif; font-size: 0.875rem; color: #333; outline: none; transition: border-color 0.2s;
+}
+input[type="password"], input[type="text"] { padding-right: 40px; }
+input::placeholder { color: #bbb; }
+input:focus { border-color: #2e7d32; }
+.toggle-pw { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: #999; display: flex; align-items: center; padding: 0; font-size: 0; }
+.toggle-pw:hover { color: #555; }
+.toggle-pw svg { width: 16px; height: 16px; }
+
+/* Error box */
+.error-box { display: none; background: #ffebee; border: 1px solid #ef9a9a; border-radius: 6px; padding: 10px 12px; margin-bottom: 14px; font-size: 0.8rem; color: #c62828; }
+.error-box.show { display: block; }
+
+/* Submit button */
+.submit-btn { width: 100%; padding: 11px; border-radius: 6px; background: #2e7d32; color: white; font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 4px; transition: background 0.2s; }
+.submit-btn:hover { background: #1b5e20; }
+
+/* Footer + demo */
+.footer-note { text-align: center; font-size: 0.72rem; color: #aaa; margin-top: 18px; line-height: 1.6; }
+.demo-note { margin-top: 18px; padding: 10px 12px; background: #f1f8e9; border: 1px solid #dcedc8; border-radius: 6px; font-size: 0.72rem; color: #558b2f; line-height: 1.6; }
+.demo-note code { color: #33691e; }
+
+/* Responsive */
+@media (max-width: 850px) {
+  .left-panel { display: none; }
+  .mobile-logo { display: flex; }
+  .right-panel { padding: 40px 20px; align-items: flex-start; }
+}

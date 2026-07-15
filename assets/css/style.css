@@ -1,0 +1,130 @@
+/* ============================================================
+   DAMS - main stylesheet
+   Layout: fixed sidebar on the left, content on the right.
+   Colours: green (health / primary) theme throughout.
+   ============================================================ */
+
+:root {
+  --dams-green: #2e7d32;
+  --dams-green-dark: #1b5e20;
+  --dams-green-light: #e8f5e9;
+  --dams-red: #c62828;
+  --sidebar-width: 250px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  color: #333;
+}
+
+/* ===== Layout ===== */
+.dams-layout { display: flex; min-height: 100vh; }
+
+.dams-sidebar {
+  width: var(--sidebar-width);
+  background: #ffffff;
+  border-right: 1px solid #e3e8ee;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 1040;
+  transition: transform 0.25s ease;
+}
+
+.dams-main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dams-content { flex: 1; }
+
+/* ===== Brand ===== */
+.dams-brand {
+  display: flex; align-items: center; gap: 12px;
+  padding: 20px 18px;
+  border-bottom: 1px solid #eef2f6;
+}
+.dams-brand-icon {
+  width: 42px; height: 42px; border-radius: 6px;
+  background: var(--dams-green); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+}
+.dams-brand-title { font-weight: 700; font-size: 1.1rem; color: #222; line-height: 1; }
+.dams-brand-sub { font-size: 0.72rem; color: #98a2b3; }
+
+/* ===== Nav links ===== */
+.dams-nav { padding: 12px 10px; flex: 1; overflow-y: auto; }
+.dams-nav-link {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 14px; margin-bottom: 4px;
+  border-radius: 6px;
+  color: #556; text-decoration: none;
+  font-size: 0.9rem; font-weight: 500;
+  transition: all 0.15s;
+}
+.dams-nav-link i { font-size: 1.1rem; }
+.dams-nav-link:hover { background: var(--dams-green-light); color: var(--dams-green); }
+.dams-nav-link.active { background: var(--dams-green); color: #fff; }
+.dams-sidebar-footer { padding: 10px; border-top: 1px solid #eef2f6; }
+
+/* ===== Topbar ===== */
+.dams-topbar {
+  background: #fff;
+  border-bottom: 1px solid #e3e8ee;
+  min-height: 60px;
+}
+.dams-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--dams-green); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 0.9rem;
+}
+
+/* ===== Cards / stats ===== */
+.stat-card {
+  background: #fff; border: 1px solid #e9edf2; border-radius: 6px;
+  padding: 18px 20px; height: 100%;
+}
+.stat-card .stat-icon {
+  width: 46px; height: 46px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; color: #fff;
+}
+.stat-value { font-size: 1.7rem; font-weight: 700; line-height: 1; }
+.stat-label { color: #8a94a6; font-size: 0.82rem; }
+
+.bg-soft-green  { background: var(--dams-green); }
+.bg-soft-blue   { background: #1565c0; }
+.bg-soft-orange { background: #ef6c00; }
+.bg-soft-red    { background: var(--dams-red); }
+.bg-soft-purple { background: #6a1b9a; }
+.bg-soft-teal   { background: #00838f; }
+
+.card { border: 1px solid #e9edf2; border-radius: 6px; }
+.card-header { background: #fff; border-bottom: 1px solid #eef2f6; font-weight: 600; }
+
+.dams-footer { border-top: 1px solid #e3e8ee; background: #fff; }
+
+/* Buttons use the green theme */
+.btn-primary { background: var(--dams-green); border-color: var(--dams-green); }
+.btn-primary:hover { background: var(--dams-green-dark); border-color: var(--dams-green-dark); }
+.text-dams-green { color: var(--dams-green) !important; }
+
+.badge-high { background: var(--dams-red); }
+.badge-low  { background: var(--dams-green); }
+
+/* ===== Responsive: collapse sidebar on small screens ===== */
+@media (max-width: 991.98px) {
+  .dams-sidebar { transform: translateX(-100%); }
+  .dams-sidebar.open { transform: translateX(0); }
+  .dams-main { margin-left: 0; }
+}

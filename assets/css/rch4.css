@@ -1,0 +1,81 @@
+/* ============================================================
+   Digital RCH4 Card - styles taken from the uploaded
+   "kadi_ya_kliniki" design (red Ministry header, official look).
+   Used by both the editable card (health worker) and the
+   read-only / printable card (patient & admin).
+   ============================================================ */
+
+.rch4-wrap { max-width: 960px; margin: 0 auto; font-family: 'Times New Roman', Times, serif; color: #000; }
+
+.rch4-header { background: #c62828; color: #fff; padding: 20px 28px; border-radius: 8px 8px 0 0; }
+.rch4-header-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.rch4-title { font-size: 22px; font-weight: bold; font-family: Arial, sans-serif; letter-spacing: 0.5px; }
+.rch4-subtitle { font-size: 13px; margin-top: 4px; opacity: 0.9; font-style: italic; }
+.rch4-badge { background: rgba(255,255,255,0.2); border: 1.5px solid rgba(255,255,255,0.5); padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: bold; font-family: Arial, sans-serif; }
+
+.rch4-body { background: #fff; border: 1.5px solid #ccc; border-top: none; border-radius: 0 0 8px 8px; overflow: hidden; }
+
+.m-tabs { display: flex; border-bottom: 1.5px solid #ddd; background: #f9f9f9; }
+.m-tab { padding: 10px 20px; font-size: 12px; font-weight: bold; font-family: Arial, sans-serif; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; color: #666; background: none; border-top: none; border-left: none; border-right: none; }
+.m-tab.active { color: #c62828; border-bottom-color: #c62828; background: #fff; }
+.m-tab:hover:not(.active) { background: #f0f0f0; color: #333; }
+.m-page { display: none; padding: 20px 24px; }
+.m-page.active { display: block; }
+
+.m-section { margin-bottom: 20px; }
+.m-section-head { display: flex; align-items: center; gap: 10px; background: #fafafa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 14px; margin-bottom: 12px; }
+.m-letter-badge { width: 34px; height: 34px; border-radius: 50%; background: #c62828; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; font-family: Arial, sans-serif; flex-shrink: 0; }
+.m-section-title { font-size: 11px; font-weight: bold; line-height: 1.5; color: #333; font-family: Arial, sans-serif; }
+
+.m-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.m-field { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; background: #fafafa; border: 1px solid #e8e8e8; border-radius: 5px; font-size: 11px; }
+.m-field .f-label { color: #444; flex: 1; }
+.m-field-full { grid-column: 1 / -1; }
+
+.m-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.m-info-field { border: 1px solid #ddd; border-radius: 6px; overflow: hidden; }
+.m-info-label { background: #f0f0f0; padding: 5px 10px; font-size: 10px; font-weight: bold; color: #555; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
+.m-info-value { padding: 8px 10px; font-size: 12px; min-height: 28px; color: #333; }
+
+.m-sub-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.m-sub-field { border: 1px solid #ddd; border-radius: 5px; overflow: hidden; }
+.m-sub-label { background: #f5f5f5; padding: 4px 8px; font-size: 9.5px; font-weight: bold; color: #666; }
+.m-sub-value { padding: 5px 8px; font-size: 11px; min-height: 22px; color: #333; }
+
+.m-table { width: 100%; border-collapse: collapse; font-size: 11px; margin: 8px 0; }
+.m-table th { background: #f5f5f5; border: 1px solid #ddd; padding: 7px 10px; font-size: 10px; font-weight: bold; color: #555; text-align: left; }
+.m-table td { border: 1px solid #ddd; padding: 7px 10px; }
+
+.m-bullet-list { list-style: none; padding: 0; }
+.m-bullet-list li { display: flex; gap: 8px; align-items: flex-start; padding: 6px 10px; border-bottom: 1px solid #f0f0f0; font-size: 11px; line-height: 1.5; }
+.m-bullet-list li:last-child { border-bottom: none; }
+.m-bullet-list li::before { content: "\2022"; color: #c62828; font-size: 14px; line-height: 1.2; flex-shrink: 0; }
+
+.m-section-divider { border: none; border-top: 1.5px solid #e0e0e0; margin: 16px 0; }
+
+.m-hudhurio-table { width: 100%; border-collapse: collapse; font-size: 10px; }
+.m-hudhurio-table th { background: #c62828; color: #fff; padding: 7px 8px; font-size: 10px; text-align: left; border: 1px solid #a00; }
+.m-hudhurio-table td { border: 1px solid #ddd; padding: 6px 8px; }
+.m-hudhurio-table tr:nth-child(even) td { background: #fafafa; }
+
+.m-notice { background: #fff8e1; border: 1px solid #ffe082; border-radius: 6px; padding: 10px 14px; font-size: 10.5px; color: #5d4037; margin-top: 12px; line-height: 1.6; }
+.m-notice strong { color: #e65100; }
+.m-footer-note { text-align: center; font-size: 10px; color: #888; font-style: italic; padding: 12px; border-top: 1px solid #eee; margin-top: 8px; }
+
+.section-heading { font-size: 12px; font-weight: bold; margin-bottom: 10px; color: #555; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Form controls inside the card keep the compact official look. */
+.rch4-input { width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 4px 6px; font-size: 11px; font-family: inherit; }
+.rch4-body .m-sub-value input.rch4-input,
+.rch4-body .m-info-value input.rch4-input { border: none; padding: 0; }
+.m-hudhurio-table input.rch4-input { border: none; }
+
+.high-risk-banner { background: #ffebee; border: 1px solid #ef9a9a; color: #c62828; border-radius: 6px; padding: 12px 16px; font-weight: bold; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+
+@media print {
+  .m-tabs, .no-print { display: none !important; }
+  .m-page { display: block !important; page-break-inside: avoid; }
+  body { background: #fff; }
+  .dams-sidebar, .dams-topbar, .dams-footer { display: none !important; }
+  .dams-main { margin-left: 0 !important; }
+}

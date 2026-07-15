@@ -1,13 +1,13 @@
 /* ============================================================
    Digital RCH4 Card - styles taken from the uploaded
-   "kadi_ya_kliniki" design (red Ministry header, official look).
+   "kadi_ya_kliniki" design, using the green DAMS theme colour.
    Used by both the editable card (health worker) and the
    read-only / printable card (patient & admin).
    ============================================================ */
 
 .rch4-wrap { max-width: 960px; margin: 0 auto; font-family: 'Times New Roman', Times, serif; color: #000; }
 
-.rch4-header { background: #c62828; color: #fff; padding: 20px 28px; border-radius: 8px 8px 0 0; }
+.rch4-header { background: #2e7d32; color: #fff; padding: 20px 28px; border-radius: 8px 8px 0 0; }
 .rch4-header-top { display: flex; justify-content: space-between; align-items: flex-start; }
 .rch4-title { font-size: 22px; font-weight: bold; font-family: Arial, sans-serif; letter-spacing: 0.5px; }
 .rch4-subtitle { font-size: 13px; margin-top: 4px; opacity: 0.9; font-style: italic; }
@@ -17,14 +17,14 @@
 
 .m-tabs { display: flex; border-bottom: 1.5px solid #ddd; background: #f9f9f9; }
 .m-tab { padding: 10px 20px; font-size: 12px; font-weight: bold; font-family: Arial, sans-serif; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; color: #666; background: none; border-top: none; border-left: none; border-right: none; }
-.m-tab.active { color: #c62828; border-bottom-color: #c62828; background: #fff; }
+.m-tab.active { color: #2e7d32; border-bottom-color: #2e7d32; background: #fff; }
 .m-tab:hover:not(.active) { background: #f0f0f0; color: #333; }
 .m-page { display: none; padding: 20px 24px; }
 .m-page.active { display: block; }
 
 .m-section { margin-bottom: 20px; }
 .m-section-head { display: flex; align-items: center; gap: 10px; background: #fafafa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 14px; margin-bottom: 12px; }
-.m-letter-badge { width: 34px; height: 34px; border-radius: 50%; background: #c62828; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; font-family: Arial, sans-serif; flex-shrink: 0; }
+.m-letter-badge { width: 34px; height: 34px; border-radius: 50%; background: #2e7d32; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; font-family: Arial, sans-serif; flex-shrink: 0; }
 .m-section-title { font-size: 11px; font-weight: bold; line-height: 1.5; color: #333; font-family: Arial, sans-serif; }
 
 .m-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -49,12 +49,12 @@
 .m-bullet-list { list-style: none; padding: 0; }
 .m-bullet-list li { display: flex; gap: 8px; align-items: flex-start; padding: 6px 10px; border-bottom: 1px solid #f0f0f0; font-size: 11px; line-height: 1.5; }
 .m-bullet-list li:last-child { border-bottom: none; }
-.m-bullet-list li::before { content: "\2022"; color: #c62828; font-size: 14px; line-height: 1.2; flex-shrink: 0; }
+.m-bullet-list li::before { content: "\2022"; color: #2e7d32; font-size: 14px; line-height: 1.2; flex-shrink: 0; }
 
 .m-section-divider { border: none; border-top: 1.5px solid #e0e0e0; margin: 16px 0; }
 
 .m-hudhurio-table { width: 100%; border-collapse: collapse; font-size: 10px; }
-.m-hudhurio-table th { background: #c62828; color: #fff; padding: 7px 8px; font-size: 10px; text-align: left; border: 1px solid #a00; }
+.m-hudhurio-table th { background: #2e7d32; color: #fff; padding: 7px 8px; font-size: 10px; text-align: left; border: 1px solid #1b5e20; }
 .m-hudhurio-table td { border: 1px solid #ddd; padding: 6px 8px; }
 .m-hudhurio-table tr:nth-child(even) td { background: #fafafa; }
 

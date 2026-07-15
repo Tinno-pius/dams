@@ -83,12 +83,6 @@ $roleMeta = [
       <h1>Better Care for<br />Every Mother</h1>
       <p>A digital system designed to improve how antenatal health data is collected, stored and accessed by healthcare providers and patients.</p>
     </div>
-
-    <div class="info-boxes">
-      <div class="info-box"><strong>3 User Roles</strong><span>Admin, Worker, Patient</span></div>
-      <div class="info-box"><strong>Secure Login</strong><span>Email-based access</span></div>
-      <div class="info-box"><strong>Health Records</strong><span>Anytime access</span></div>
-    </div>
   </div>
 
   <!-- RIGHT PANEL -->
